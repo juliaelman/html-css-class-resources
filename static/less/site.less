@@ -1,0 +1,89 @@
+/*
+ * GDIRDU HTML/CSS Class Resources
+ * Source: https://github.com/juliaelman/html-css-class-resources/
+ *
+ * Copyright 2013, Julia Elman
+ * BSD License
+ *
+*/
+
+/* Bootstrap imports
+======================== */
+@import "../bootstrap/less/bootstrap.less";
+@import "../bootstrap/less/responsive.less";
+
+
+/* Variables
+======================== */
+@gdipink: #fe5a61;
+@red: #b60101;
+
+/* Sitewide styles
+======================== */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    #gradient .vertical(lighten(@gdipink, 10%), @gdipink);
+    color: @white;
+    a { 
+    	color: @red; 
+    	&:hover {
+    		color: (darken(@red, 20%));
+    	}
+    }
+    .container-narrow {
+    	max-width: 700px;
+    	margin: 0 auto;
+    }
+    #page {
+    	margin: 0 auto -60px;
+    	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	}
+	header {
+		.makeRow;
+		.page-header;
+		border-bottom-color: @gdipink;
+		p {
+			.lead;
+		}
+	}
+	ul {
+		margin-left: 0;
+  		list-style: none;
+	}
+
+	#push, #footer {
+		height: 60px;
+	}
+
+    #footer {
+    	background-color: lighten(@yellow, 40%);
+        @media (max-width: 767px) {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+      	}
+      	font-size: 16px;
+      	p {
+      		margin: 20px 0;
+      		color: @grayLight;
+      	}
+    }
+}
+
+/* Resource list styles
+======================== */
+.resources {
+	ul {
+		li {
+			line-height: 36px;
+		}
+		margin: 0;
+	}
+}
