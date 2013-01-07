@@ -25,69 +25,84 @@ body {
     height: 100%;
 }
 
+.container-narrow {
+    max-width: 700px;
+    margin: 0 auto;
+    @media (max-width: 767px) {
+    	margin-left: 20px;
+    }
+}
+
+#content {
+	.makeRow;
+}
+
+a { 
+	color: @red; 
+	&:hover {
+		color: (darken(@red, 20%));
+	}
+} 
+
 body {
-    #gradient .vertical(lighten(@gdipink, 10%), @gdipink);
-    color: @white;
-    a { 
-    	color: @red; 
-    	&:hover {
-    		color: (darken(@red, 20%));
-    	}
-    }
-    .container-narrow {
-    	max-width: 700px;
-    	margin: 0 auto;
-    }
     #page {
-    	margin: 0 auto -60px;
+    	margin: 0 auto -40px;
     	min-height: 100%;
         height: auto !important;
         height: 100%;
 	}
 	header {
+		padding-top: 10px;
+		#gradient .vertical(lighten(@gdipink, 5%), @gdipink);
+		color: @white;
+		border-bottom: 1px solid darken(@gdipink, 20%);
 		.makeRow;
-		.page-header;
-		border-bottom-color: @gdipink;
-		p {
-			.lead;
+		@media (max-width: 767px) {
+			margin-right: -20px;
+			margin-left: -20px;
 		}
+		hgroup { .container-narrow; }
+		p { .lead; }
 	}
+
 	ul {
 		margin-left: 0;
   		list-style: none;
 	}
 
-	#push, #footer {
-		height: 60px;
+	#push, #test {
+		height: 40px;
 	}
 
-    #footer {
-    	background-color: lighten(@yellow, 40%);
-        @media (max-width: 767px) {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-      	}
-      	font-size: 16px;
-      	p {
-      		margin: 20px 0;
-      		color: @grayLight;
-      		a {
+	footer { 
+		background-color: @grayLighter;
+		.makeRow;
+		@media (max-width: 767px) {
+			margin-right: -20px;
+			margin-left: -20px;
+		}
+    	#fgroup {
+    		.container-narrow;
+      		font-size: 16px;
+      		p {
+      			margin: 20px 0;
       			color: @grayLight;
-      			font-weight: bold;	
+      			a {
+      				color: @grayLight;
+      				font-weight: bold;	
+      			}
       		}
-      	}
-    }
+    	}
+	}
 }
 
 /* Resource list styles
 ======================== */
 .resources {
+	.container-narrow;
 	ul {
 		li {
 			line-height: 36px;
 		}
-		margin: 0;
 	}
 }
