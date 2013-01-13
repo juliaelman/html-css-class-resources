@@ -53,15 +53,24 @@ body {
 	}
 	header {
 		padding-top: 10px;
-		#gradient .vertical(lighten(@gdipink, 10%), @gdipink);
+		background-color: @gdipink;
 		color: @white;
-		border-bottom: 3px solid darken(@gdipink, 20%);
 		.makeRow;
+		.box-shadow(inset 0 3px 10px rgba(0,0,0,.075));
 		@media (max-width: 767px) {
 			margin-right: -20px;
 			margin-left: -20px;
 		}
 		hgroup { .container-narrow; }
+		h1 {  
+			color: @red;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125); 
+			line-height: 24px;
+			a:hover {
+				color: lighten(@red, 20%);
+				text-decoration: none;
+			}
+		}
 		p { .lead; }
 	}
 
@@ -102,11 +111,9 @@ body {
 	.container-narrow;
 	ul {
 		margin: 25px 0;
+		width: 60%;
 		li {
-			border-left: 5px @grayLight solid;
-			padding-left: 10px;
 			margin: 30px 0;
-			line-height: 24px;
 			h4 { 
 				line-height: 18px;
 				margin: 3px 0;
