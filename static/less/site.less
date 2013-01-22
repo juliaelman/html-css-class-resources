@@ -47,10 +47,7 @@ a {
 
 body {
     #page {
-    	margin: 0 auto -40px;
-    	min-height: 100%;
-        height: auto !important;
-        height: 100%;
+    	margin: 0 auto;
 	}
 	header {
 		padding-top: 10px;
@@ -80,10 +77,6 @@ body {
   		list-style: none;
 	}
 
-	#push, #test {
-		height: 40px;
-	}
-
 	footer { 
 		background-color: @grayLighter;
 		.makeRow;
@@ -100,6 +93,9 @@ body {
       			a {
       				color: @grayLight;
       				font-weight: bold;	
+      				&:hover {
+      					color: @gray;
+      				}
       			}
       		}
     	}
